@@ -1,4 +1,4 @@
-package com.jasbir.notealert.ui.theme
+package com.jasbir.notealert.feature_note.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

@@ -18,10 +18,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 
 import androidx.navigation.NavController
+import com.jasbir.notealert.R
 import com.jasbir.notealert.feature_note.domain.model.Note
 import com.jasbir.notealert.feature_note.presentation.add_edit_note.AddEditNoteEvent
 import com.jasbir.notealert.feature_note.presentation.add_edit_note.AddEditNoteViewModel
@@ -29,7 +31,6 @@ import com.jasbir.notealert.feature_note.presentation.add_edit_note.components.T
 
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-
 
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -53,12 +54,13 @@ fun AddEditNoteScreen(
 
     LaunchedEffect(key1 = true) {
         viewModel.eventFlow.collectLatest { event ->
-            when(event) {
+            when (event) {
                 is AddEditNoteViewModel.UiEvent.ShowSnackbar -> {
                     scaffoldState.snackbarHostState.showSnackbar(
                         message = event.message
                     )
                 }
+
                 is AddEditNoteViewModel.UiEvent.SaveNote -> {
                     navController.navigateUp()
                 }
@@ -75,12 +77,15 @@ fun AddEditNoteScreen(
                 },
                 backgroundColor = MaterialTheme.colors.primary
             ) {
-                Icon(imageVector = Icons.Default.Done, contentDescription = "Save note")
+                Icon(
+                    painter = painterResource(id = R.drawable.baseline_save_24),
+                    contentDescription = "Save Note"
+                )
             }
         },
         scaffoldState = scaffoldState,
 
-    ) {
+        ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()

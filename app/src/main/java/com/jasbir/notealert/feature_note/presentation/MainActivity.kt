@@ -26,7 +26,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 
 import com.jasbir.notealert.feature_note.presentation.notes.NotesScreen
-import com.jasbir.notealert.ui.theme.NoteAlertTheme
+import com.jasbir.notealert.feature_note.presentation.ui.theme.NoteAlertTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

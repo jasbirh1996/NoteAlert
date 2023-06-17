@@ -1,4 +1,4 @@
-package com.jasbir.notealert.ui.theme
+package com.jasbir.notealert.feature_note.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

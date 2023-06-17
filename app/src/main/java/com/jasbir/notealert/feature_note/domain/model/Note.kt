@@ -2,11 +2,11 @@ package com.jasbir.notealert.feature_note.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.jasbir.notealert.ui.theme.Blue
-import com.jasbir.notealert.ui.theme.Light_Green
-import com.jasbir.notealert.ui.theme.Orange
-import com.jasbir.notealert.ui.theme.Pink40
-import com.jasbir.notealert.ui.theme.Yellow
+import com.jasbir.notealert.feature_note.presentation.ui.theme.Blue
+import com.jasbir.notealert.feature_note.presentation.ui.theme.Light_Green
+import com.jasbir.notealert.feature_note.presentation.ui.theme.Orange
+import com.jasbir.notealert.feature_note.presentation.ui.theme.Pink40
+import com.jasbir.notealert.feature_note.presentation.ui.theme.Yellow
 
 @Entity
 data class Note(
